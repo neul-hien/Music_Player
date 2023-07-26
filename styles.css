@@ -1,0 +1,186 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url(/Content/purple.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.container{
+    border-radius: 15px;
+    background: white;
+    display: inline-flex;
+    min-height: 300px;
+}
+#playlist > p {
+    font-family: Arial, sans-serif;
+}
+.music-player {
+    text-align: center;
+    max-width: 500px;
+    background-image: linear-gradient(to bottom right,rgba(62, 0, 50, 0.7), rgba(0, 0, 0, 0.8));
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+}   
+#playlist{
+    background-image: linear-gradient(to bottom right,rgba(62, 0, 50, 0.7), rgba(0, 0, 0, 0.8));
+    padding: 20px;
+    max-width: 250px;
+    border-radius: 15px 0 0 15px;
+    color: white;
+    max-height: 405px;
+    overflow-y: auto;
+}
+.song{
+    width: 240px;
+    height: 50px;
+    margin-bottom: 5px;
+    display: inline-flex;
+}
+.song:hover{
+    background-color: rgba(140, 127, 127, 0.6);
+    cursor: pointer;
+}
+.song-picture{
+    width: 50px;
+    margin-right: 10px;
+    background-image: url(/Content/mucsic-note.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.group-name{
+    width: 150px;
+}
+
+.song-name{
+    font-size: 20px;
+}
+
+.singer-name{
+    font-weight: normal;
+}
+.current-song{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.spectrums {
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    display: flex;
+}
+
+.current-progress {
+    height: 100%;
+    width: 0%;
+    background-color: #ffffff; /* Màu cho dải spectrum hiển thị thời lượng nhạc đã phát */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.current-time{
+    margin-top: 10px;
+}
+.max-time{
+    margin-top: 10px;
+    margin-left: auto;
+}
+.controls {
+    margin-top: 30px;
+}
+
+button {
+    padding: 8px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(28, 28, 28, 0.8); /* Chuyển mã hex #1c1c1c thành giá trị RGB */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 25px;
+}
+
+
+/* Đảm bảo icon sẽ nằm giữa nút */
+button i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Thay đổi màu sắc khi hover */
+button:hover {
+    background-color: #b2b3b4;
+}
+.repeat{
+    padding-right: 5px;
+}
+.mix{
+    padding-left: 5px;
+}
+.repeat:hover{
+    color: gray;
+    cursor: pointer;
+}
+.mix:hover{
+    color: gray;
+    cursor: pointer;
+}
+.disc-container {
+    width: 100%;
+    text-align: center;
+}
+
+.disc {
+    width: 250px;
+    height: 250px;
+    background-image: url(/Content/compact-disk_2889824.png);
+    background-size: cover;
+    margin: 10px auto;
+    position: relative;
+    animation: rotateDisc 3s linear infinite paused;
+}
+/* CSS */
+@keyframes rotateDisc {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+  
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(#897f7f, 0); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(#f1f1f1,0); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(gray, 0); 
+  }

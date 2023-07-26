@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="song-list" id="playlist">
+            <p style="margin: 0 0 20px 0;font-size: 20px; padding-bottom:10px ; border-bottom: solid ;">Play list</p>
+            <!-- Danh sách bài hát sẽ được tạo bằng JavaScript -->
+        </div>
+        <div class="music-player">
+            <div class="disc-container">
+                <div class="disc"></div>
+            </div>
+            <audio id="audio-player"></audio>
+            <div class="current-song"></div>
+            <div class="spectrums">
+                <div class="current-time">00:00</div>
+                <div class="current-progress"></div>
+                <div class="total-progress"></div>
+                <div class="max-time">00:00</div>
+            </div>
+            <div class="controls" onclick="toggleRepeat()">
+                <i class="repeat fas fa-repeat"></i>
+                <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                <button  id="play-pause-btn"><i class="fas fa-play"></i></button>
+                <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+                <i class="mix fas fa-random" onclick="toggleMix()"></i>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
